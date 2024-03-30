@@ -1,5 +1,4 @@
 const mongoose = require('mongoose')
-const Item = require('./item')
 
 const billSchema = new mongoose.Schema({
     customerName: {
@@ -10,7 +9,6 @@ const billSchema = new mongoose.Schema({
     items: [{
         itemId: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: Item,
             required: true
         },
         itemName: {
